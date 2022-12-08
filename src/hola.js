@@ -4,7 +4,7 @@ function testData() {
     // event.preventDefault();
     const token = document.cookie.replace('token=', '');
     // console.log(token);
-    fetch('http://localhost:1234/test', {
+    fetch('http://192.168.5.59:1234/test', {
         method: 'POST',
         headers: {
             'authorization': token
@@ -16,7 +16,7 @@ function testData() {
             if (data.msg === 'Congratulations') {
                 title.textContent = `Bienvenido ${data.name}`
             } else {
-                window.location.href = 'http://127.0.0.1:5500/Login/login.html';
+                window.location.href = 'http://192.168.5.59:5500/Login/login.html';
             }
         })
     

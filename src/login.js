@@ -6,7 +6,7 @@ function onSubmit(event) {
     event.preventDefault();
     data = { username: username.value, password: password.value }
 
-    fetch('http://localhost:1234/login', {
+    fetch('http://192.168.5.59:1234/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -17,7 +17,7 @@ function onSubmit(event) {
         .then(cred => {
             document.cookie = `token=${cred.token}; max-age=${60*60}; path=/; samesite=strict`
             if (cred.token !== 'noToken') {
-                window.location.href = 'http://127.0.0.1:5500/Login/hola.html';
+                window.location.href = 'hola.html';
             } else {
                 statusLogin.textContent = 'Fail username or password';
             }

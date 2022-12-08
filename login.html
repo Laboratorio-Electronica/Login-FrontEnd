@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="https://kit.fontawesome.com/e00844d238.js" crossorigin="anonymous"></script>
+    <script defer src="./src/login.js"></script>
+    <title>Log in</title>
+</head>
+<body>
+    <main>
+        <img class="login-frontPage">
+
+        <form action="submit" class="login-form">
+            <img src="./assets/Logo.png" alt="Logo" class="form-logo">
+            <h1 class="form-title">Welcome</h1>
+
+            <div class="form-input">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="User name" id="username">
+            </div>
+
+            <div class="form-input">
+                <i class="fa-solid fa-key"></i>
+                <input type="password" placeholder="Password" autocomplete="off" id="password">
+            </div>
+
+            <p id="statusLogin"></p>
+
+            <div class="form-buttons">
+                <button onclick="onSubmit(event)">Sign in</button>
+                <!-- <button onclick="testData(event)">Test data</button> -->
+            </div>
+        </form>
+    </main>
+</body>
+</html>
